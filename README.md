@@ -1,5 +1,7 @@
 # Node.js Design Patterns, Fourth Edition
 
+[![CodeQL Advanced](https://github.com/ibiscum/Node.js-Design-Patterns-Fourth-Edition/actions/workflows/codeql.yml/badge.svg)](https://github.com/ibiscum/Node.js-Design-Patterns-Fourth-Edition/actions/workflows/codeql.yml)
+
 Node.js Design Patterns, Fourth Edition, published by Packt
 
 The all the code examples in this repo are organised by chapter, for every
