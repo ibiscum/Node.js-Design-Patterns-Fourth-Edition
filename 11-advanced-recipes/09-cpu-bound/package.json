@@ -11,5 +11,7 @@
   "keywords": [],
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "escape-html": "^1.0.3"
+  }
 }
