@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {},
   "engines": {
-    "node": ">=24"
+    "node": ">=22"
   },
   "engineStrict": true,
   "keywords": [],
