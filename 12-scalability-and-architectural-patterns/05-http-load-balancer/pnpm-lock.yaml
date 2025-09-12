@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       pm2:
-        specifier: ^6.0.9
-        version: 6.0.9
+        specifier: ^6.0.10
+        version: 6.0.10
     devDependencies:
       autocannon:
         specifier: ^8.0.0
@@ -549,8 +549,8 @@ packages:
   pm2-sysmonit@1.2.8:
     resolution: {integrity: sha512-ACOhlONEXdCTVwKieBIQLSi2tQZ8eKinhcr9JpZSUAL8Qy0ajIgRtsLxG/lwPOW3JEKqPyw/UaHmTWhUzpP4kA==}
 
-  pm2@6.0.9:
-    resolution: {integrity: sha512-OyXwuqOjH4LpaA7mQtqCgAp1fWrnjL7Qwz3NjBJEnc9UMXUEoUrv447X8XoFiyw1JUJfM6IqXSSy2MlIxISvTg==}
+  pm2@6.0.10:
+    resolution: {integrity: sha512-sbk4HsnhtJMx1wJlhFQhYfDRzHtVK+cvdrIezbjM9WjSyc7kLtQ4nZ5K7JLOdLe3AevytmRcTiOa3VvAQrve2A==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
@@ -1268,7 +1268,7 @@ snapshots:
       - supports-color
     optional: true
 
-  pm2@6.0.9:
+  pm2@6.0.10:
     dependencies:
       '@pm2/agent': 2.1.1
       '@pm2/io': 6.1.0
