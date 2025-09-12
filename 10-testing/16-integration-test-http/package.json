@@ -12,7 +12,7 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
-    "fastify": "^5.2.2",
+    "fastify": "^5.3.2",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }
