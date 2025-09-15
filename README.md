@@ -1,6 +1,7 @@
 # Node.js Design Patterns, Fourth Edition
 
 [![CodeQL Advanced](https://github.com/ibiscum/Node.js-Design-Patterns-Fourth-Edition/actions/workflows/codeql.yml/badge.svg)](https://github.com/ibiscum/Node.js-Design-Patterns-Fourth-Edition/actions/workflows/codeql.yml)
+[![Dependabot Updates](https://github.com/ibiscum/Node.js-Design-Patterns-Fourth-Edition/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/ibiscum/Node.js-Design-Patterns-Fourth-Edition/actions/workflows/dependabot/dependabot-updates)
 
 Node.js Design Patterns, Fourth Edition, published by Packt
 
