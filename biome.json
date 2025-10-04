@@ -1,50 +1,28 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
   "files": {
-    "ignoreUnknown": true,
-    "ignore": [
-      "**/invalid_json.json",
-      "coverage/",
-      "lcov-viewer/",
-      "playwright-report/"
-    ]
-  },
-  "organizeImports": {
-    "enabled": true
+    "ignoreUnknown": true
   },
   "linter": {
     "enabled": true,
     "rules": {
       "recommended": true,
       "nursery": {
-        "all": true,
-        "noProcessEnv": "off",
-        "useImportRestrictions": "off",
         "noSecrets": "off"
       },
       "correctness": {
-        "all": true,
         "noNodejsModules": "off",
         "noUndeclaredDependencies": "off"
       },
-      "complexity": {
-        "all": true
-      },
-      "performance": {
-        "all": true
-      },
-      "security": {
-        "all": true
-      },
+      "complexity": {},
+      "performance": {},
+      "security": {},
       "style": {
-        "all": true,
         "noDoneCallback": "off",
         "useFilenamingConvention": "off"
       },
       "suspicious": {
-        "all": true,
         "noEmptyBlockStatements": "off",
-        "noConsoleLog": "off",
         "noRedundantUseStrict": "off",
         "noConsole": {
           "level": "info",
@@ -58,7 +36,6 @@
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
-    "ignore": [],
     "attributePosition": "auto",
     "indentStyle": "space",
     "indentWidth": 2,

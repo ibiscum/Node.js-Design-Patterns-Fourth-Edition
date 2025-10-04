@@ -10,14 +10,14 @@ const url = new UrlBuilder()
 // Example: log without authentication information
 const sanitizedUrl = (() => {
   // reconstruct URL without the username and password
-  let str = '';
-  if (url.protocol) str += `${url.protocol}://`;
+  let str = ''
+  if (url.protocol) str += `${url.protocol}://`
   // Skip credentials!
-  str += url.hostname;
-  if (url.port) str += url.port;
-  if (url.pathname) str += url.pathname;
-  if (url.search) str += `?${url.search}`;
-  if (url.hash) str += `#${url.hash}`;
-  return str;
-})();
-console.log(sanitizedUrl);
+  str += url.hostname
+  if (url.port) str += url.port
+  if (url.pathname) str += url.pathname
+  if (url.search) str += `?${url.search}`
+  if (url.hash) str += `#${url.hash}`
+  return str
+})()
+console.log(sanitizedUrl)
