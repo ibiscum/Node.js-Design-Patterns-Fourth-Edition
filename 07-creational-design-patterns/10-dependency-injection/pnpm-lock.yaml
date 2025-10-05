@@ -15,7 +15,7 @@ importers:
         specifier: ^5.1.7
         version: 5.1.7
       tar-fs:
-        specifier: ^3.1.1
+        specifier: 3.1.1
         version: 3.1.1
 
 packages:
