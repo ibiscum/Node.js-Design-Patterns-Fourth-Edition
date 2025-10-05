@@ -48,11 +48,7 @@ This will make the server available at `http://localhost:3000/`
 You can now create a new event with a request like the following:
 
 ```bash
-curl \ 
-  -X POST \ 
-  -H 'Content-Type: application/json' \ 
-  -d '{"name":"sample event", "totalSeats": 22}' \ 
-  http://localhost:3000/events
+curl -X POST -H 'Content-Type: application/json' -d '{"name":"sample event", "totalSeats": 22}' http://localhost:3000/events
 ```
 
 This should return a 201 Created response with the event id in the body, for
@@ -69,11 +65,7 @@ Now you can create reservations for the event with a request like the following
 (make sure to update the event id in the URL):
 
 ```bash
-curl \
-  -X POST \
-  -H 'Content-Type: application/json' \
-  -d '{"userId": "John"}' \
-  http://localhost:3000/events/21cd8fdf-95e5-4253-9ca4-7291c63f25e7/reservations
+curl -X POST -H 'Content-Type: application/json' -d '{"userId": "John"}' http://localhost:3000/events/21cd8fdf-95e5-4253-9ca4-7291c63f25e7/reservations
 ```
 
 If the reservation is successful, you should get a 201 Created response with the

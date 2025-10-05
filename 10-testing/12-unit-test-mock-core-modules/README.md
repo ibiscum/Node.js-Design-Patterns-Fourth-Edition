@@ -1,6 +1,6 @@
 # 12-unit-test-mock-core-modules
 
-Demonstrates how to mock Node.ks core modules.
+Demonstrates how to mock Node.js core modules.
 
 ## Dependencies
 

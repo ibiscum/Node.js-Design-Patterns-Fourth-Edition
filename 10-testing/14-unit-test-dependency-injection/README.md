@@ -1,11 +1,11 @@
-# 13-unit-test-mock-other-modules
+# 14-unit-test-dependancy-injection
 
-Demonstrates how to mock internal or third-party modules
+Demonstrates how to test dependancy injection
 
 ## Run
 
 To run the example launch:
 
 ```
-node --test  --experimental-test-module-mocks
+node --test
 ```
