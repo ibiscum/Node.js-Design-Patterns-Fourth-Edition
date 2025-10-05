@@ -1,5 +1,5 @@
 import { createServer } from 'node:http'
-// import escape from 'escape'
+import escape from 'escape-html'
 import { SubsetSum } from './subsetSum.js'
 
 // import { SubsetSum } from './subsetSumDefer.js'
@@ -19,7 +19,7 @@ createServer((req, res) => {
   const subsetSum = new SubsetSum(sum, data)
   subsetSum.on('match', match => {
     res.cork()
-    res.write(`Match: ${JSON.stringify(match)}\n`)
+    res.write(`Match: ${escape(JSON.stringify(match))}\n`)
     res.uncork()
   })
   subsetSum.on('end', () => res.end())
