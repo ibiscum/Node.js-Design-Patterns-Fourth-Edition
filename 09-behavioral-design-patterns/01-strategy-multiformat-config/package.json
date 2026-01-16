@@ -1,22 +1,22 @@
 {
-  "name": "01-strategy-multiformat-config",
-  "version": "1.0.0",
-  "description": "This sample shows how to use the Strategy pattern to create a configuration manager that supports various file formats",
-  "type": "module",
-  "scripts": {},
-  "engines": {
-    "node": ">=24"
-  },
-  "engineStrict": true,
-  "keywords": [],
-  "author": "Luciano Mammino and Mario Casciaro",
-  "license": "MIT",
-  "dependencies": {
-    "smol-toml": "^1.4.2",
-    "yaml": "^2.8.1"
-  },
-  "devDependencies": {
-    "@types/node": "^24.8.1",
-    "typescript": "^5.9.3"
-  }
+	"name": "01-strategy-multiformat-config",
+	"version": "1.0.0",
+	"description": "This sample shows how to use the Strategy pattern to create a configuration manager that supports various file formats",
+	"type": "module",
+	"scripts": {},
+	"engines": {
+		"node": ">=24"
+	},
+	"engineStrict": true,
+	"keywords": [],
+	"author": "Luciano Mammino and Mario Casciaro",
+	"license": "MIT",
+	"dependencies": {
+		"smol-toml": "^1.4.2",
+		"yaml": "^2.8.1"
+	},
+	"devDependencies": {
+		"@types/node": "^24.8.1",
+		"typescript": "^5.9.3"
+	}
 }

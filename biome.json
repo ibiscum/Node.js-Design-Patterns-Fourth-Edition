@@ -1,61 +1,34 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
-  "files": {
-    "ignoreUnknown": true
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "nursery": {
-        "noSecrets": "off"
-      },
-      "correctness": {
-        "noNodejsModules": "off",
-        "noUndeclaredDependencies": "off"
-      },
-      "complexity": {},
-      "performance": {},
-      "security": {},
-      "style": {
-        "noDoneCallback": "off",
-        "useFilenamingConvention": "off"
-      },
-      "suspicious": {
-        "noEmptyBlockStatements": "off",
-        "noRedundantUseStrict": "off",
-        "noConsole": {
-          "level": "info",
-          "options": {
-            "allow": ["assert", "error", "info", "warn", "log"]
-          }
-        }
-      }
-    }
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": false,
-    "attributePosition": "auto",
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineWidth": 80,
-    "lineEnding": "lf"
-  },
-  "javascript": {
-    "formatter": {
-      "semicolons": "asNeeded",
-      "quoteProperties": "asNeeded",
-      "quoteStyle": "single",
-      "arrowParentheses": "asNeeded",
-      "trailingCommas": "es5",
-      "bracketSpacing": true,
-      "bracketSameLine": true
-    }
-  },
-  "json": {
-    "formatter": {
-      "trailingCommas": "none"
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"useIgnoreFile": false
+	},
+	"files": {
+		"ignoreUnknown": false
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"assist": {
+		"enabled": true,
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	}
 }

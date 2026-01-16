@@ -1,19 +1,19 @@
 {
-  "name": "16-integration-test-http",
-  "version": "1.0.0",
-  "description": "Demonstrates how to create an integration test for an HTTP server using Fastify",
-  "type": "module",
-  "scripts": {},
-  "engines": {
-    "node": ">=24"
-  },
-  "engineStrict": true,
-  "keywords": [],
-  "author": "Luciano Mammino and Mario Casciaro",
-  "license": "MIT",
-  "dependencies": {
-    "fastify": "^5.6.0",
-    "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
-  }
+	"name": "16-integration-test-http",
+	"version": "1.0.0",
+	"description": "Demonstrates how to create an integration test for an HTTP server using Fastify",
+	"type": "module",
+	"scripts": {},
+	"engines": {
+		"node": ">=24"
+	},
+	"engineStrict": true,
+	"keywords": [],
+	"author": "Luciano Mammino and Mario Casciaro",
+	"license": "MIT",
+	"dependencies": {
+		"fastify": "^5.6.0",
+		"sqlite": "^5.1.1",
+		"sqlite3": "^5.1.7"
+	}
 }

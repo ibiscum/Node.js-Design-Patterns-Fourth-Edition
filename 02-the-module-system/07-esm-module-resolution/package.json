@@ -1,17 +1,17 @@
 {
-  "name": "07-esm-module-resolution",
-  "version": "1.0.0",
-  "description": "demonstrates how module resolution works with ESM",
-  "type": "module",
-  "scripts": {},
-  "engines": {
-    "node": ">=24"
-  },
-  "engineStrict": true,
-  "keywords": [],
-  "author": "Luciano Mammino and Mario Casciaro",
-  "license": "MIT",
-  "dependencies": {
-    "fastify": "^5.6.0"
-  }
+	"name": "@02-the.module-system/07-esm-module-resolution",
+	"version": "1.0.0",
+	"description": "demonstrates how module resolution works with ESM",
+	"type": "module",
+	"scripts": {},
+	"engines": {
+		"node": ">=24"
+	},
+	"engineStrict": true,
+	"keywords": [],
+	"author": "Luciano Mammino and Mario Casciaro",
+	"license": "MIT",
+	"dependencies": {
+		"fastify": "^5.6.2"
+	}
 }
