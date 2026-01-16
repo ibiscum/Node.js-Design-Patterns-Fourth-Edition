@@ -11,8 +11,8 @@ const csvParser = new Parser({ columns: true });
 // as small as possible. For this reason we added an extra step that decompresses
 // the data on the fly. The final result doesn't change
 createReadStream("data.csv.gz")
-	.pipe(createGunzip())
-	.pipe(csvParser)
-	.pipe(new FilterByCountry("Italy"))
-	.pipe(new SumProfit())
-	.pipe(process.stdout);
+  .pipe(createGunzip())
+  .pipe(csvParser)
+  .pipe(new FilterByCountry("Italy"))
+  .pipe(new SumProfit())
+  .pipe(process.stdout);

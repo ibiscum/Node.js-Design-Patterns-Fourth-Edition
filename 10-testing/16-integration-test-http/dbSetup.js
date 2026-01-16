@@ -1,5 +1,5 @@
 export async function createTables(db) {
-	await db.query(`
+  await db.query(`
     CREATE TABLE IF NOT EXISTS events (
       id TEXT PRIMARY KEY,
       name TEXT NOT NULL,
@@ -7,7 +7,7 @@ export async function createTables(db) {
     )
   `);
 
-	await db.query(`
+  await db.query(`
     CREATE TABLE IF NOT EXISTS reservations (
       id TEXT PRIMARY KEY,
       eventId TEXT NOT NULL,

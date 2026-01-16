@@ -1,64 +1,64 @@
 class StackCalculator {
-	constructor() {
-		this.stack = [];
-	}
+  constructor() {
+    this.stack = [];
+  }
 
-	putValue(value) {
-		this.stack.push(value);
-	}
+  putValue(value) {
+    this.stack.push(value);
+  }
 
-	getValue() {
-		return this.stack.pop();
-	}
+  getValue() {
+    return this.stack.pop();
+  }
 
-	peekValue() {
-		return this.stack[this.stack.length - 1];
-	}
+  peekValue() {
+    return this.stack[this.stack.length - 1];
+  }
 
-	clear() {
-		this.stack = [];
-	}
+  clear() {
+    this.stack = [];
+  }
 
-	divide() {
-		const divisor = this.getValue();
-		const dividend = this.getValue();
-		const result = dividend / divisor;
-		this.putValue(result);
-		return result;
-	}
+  divide() {
+    const divisor = this.getValue();
+    const dividend = this.getValue();
+    const result = dividend / divisor;
+    this.putValue(result);
+    return result;
+  }
 
-	multiply() {
-		const multiplicand = this.getValue();
-		const multiplier = this.getValue();
-		const result = multiplier * multiplicand;
-		this.putValue(result);
-		return result;
-	}
+  multiply() {
+    const multiplicand = this.getValue();
+    const multiplier = this.getValue();
+    const result = multiplier * multiplicand;
+    this.putValue(result);
+    return result;
+  }
 }
 
 function patchCalculator(calculator) {
-	// new method
-	calculator.add = () => {
-		const addend2 = calculator.getValue();
-		const addend1 = calculator.getValue();
-		const result = addend1 + addend2;
-		calculator.putValue(result);
-		return result;
-	};
+  // new method
+  calculator.add = () => {
+    const addend2 = calculator.getValue();
+    const addend1 = calculator.getValue();
+    const result = addend1 + addend2;
+    calculator.putValue(result);
+    return result;
+  };
 
-	// modified method
-	const divideOrig = calculator.divide;
-	calculator.divide = () => {
-		// additional validation logic
-		const divisor = calculator.peekValue();
-		if (divisor === 0) {
-			throw new Error("Division by 0");
-		}
-		// if valid delegates to the subject
-		return divideOrig.apply(calculator);
-	};
+  // modified method
+  const divideOrig = calculator.divide;
+  calculator.divide = () => {
+    // additional validation logic
+    const divisor = calculator.peekValue();
+    if (divisor === 0) {
+      throw new Error("Division by 0");
+    }
+    // if valid delegates to the subject
+    return divideOrig.apply(calculator);
+  };
 
-	return calculator;
+  return calculator;
 }
 
 const calculator = new StackCalculator();

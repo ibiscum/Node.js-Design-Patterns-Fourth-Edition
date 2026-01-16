@@ -1,70 +1,70 @@
 class StackCalculator {
-	constructor() {
-		this.stack = [];
-	}
+  constructor() {
+    this.stack = [];
+  }
 
-	putValue(value) {
-		this.stack.push(value);
-	}
+  putValue(value) {
+    this.stack.push(value);
+  }
 
-	getValue() {
-		return this.stack.pop();
-	}
+  getValue() {
+    return this.stack.pop();
+  }
 
-	peekValue() {
-		return this.stack[this.stack.length - 1];
-	}
+  peekValue() {
+    return this.stack[this.stack.length - 1];
+  }
 
-	clear() {
-		this.stack = [];
-	}
+  clear() {
+    this.stack = [];
+  }
 
-	divide() {
-		const divisor = this.getValue();
-		const dividend = this.getValue();
-		const result = dividend / divisor;
-		this.putValue(result);
-		return result;
-	}
+  divide() {
+    const divisor = this.getValue();
+    const dividend = this.getValue();
+    const result = dividend / divisor;
+    this.putValue(result);
+    return result;
+  }
 
-	multiply() {
-		const multiplicand = this.getValue();
-		const multiplier = this.getValue();
-		const result = multiplier * multiplicand;
-		this.putValue(result);
-		return result;
-	}
+  multiply() {
+    const multiplicand = this.getValue();
+    const multiplier = this.getValue();
+    const result = multiplier * multiplicand;
+    this.putValue(result);
+    return result;
+  }
 }
 
 const enhancedCalculatorHandler = {
-	get(target, property) {
-		if (property === "add") {
-			// new method
-			return function add() {
-				const addend2 = target.getValue();
-				const addend1 = target.getValue();
-				const result = addend1 + addend2;
-				target.putValue(result);
-				return result;
-			};
-		}
+  get(target, property) {
+    if (property === "add") {
+      // new method
+      return function add() {
+        const addend2 = target.getValue();
+        const addend1 = target.getValue();
+        const result = addend1 + addend2;
+        target.putValue(result);
+        return result;
+      };
+    }
 
-		if (property === "divide") {
-			// modified method
-			return () => {
-				// additional validation logic
-				const divisor = target.peekValue();
-				if (divisor === 0) {
-					throw new Error("Division by 0");
-				}
-				// if valid delegates to the subject
-				return target.divide();
-			};
-		}
+    if (property === "divide") {
+      // modified method
+      return () => {
+        // additional validation logic
+        const divisor = target.peekValue();
+        if (divisor === 0) {
+          throw new Error("Division by 0");
+        }
+        // if valid delegates to the subject
+        return target.divide();
+      };
+    }
 
-		// delegated methods and properties
-		return target[property];
-	},
+    // delegated methods and properties
+    return target[property];
+  },
 };
 
 const calculator = new StackCalculator();

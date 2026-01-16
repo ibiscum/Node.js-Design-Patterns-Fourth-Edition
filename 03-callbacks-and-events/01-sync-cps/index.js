@@ -1,5 +1,5 @@
 function addCps(a, b, callback) {
-	callback(a + b);
+  callback(a + b);
 }
 
 console.log("before");

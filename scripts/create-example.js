@@ -11,10 +11,10 @@ import { mkdirp } from "mkdirp";
 const [, , chapter, exampleName, exampleDescription] = process.argv;
 
 if (!(chapter && exampleName && exampleDescription)) {
-	console.error(
-		"Usage: node utils/create-example.js <chapter> <exampleName> <exampleDescription>",
-	);
-	process.exit(1);
+  console.error(
+    "Usage: node utils/create-example.js <chapter> <exampleName> <exampleDescription>",
+  );
+  process.exit(1);
 }
 
 // create folder
@@ -50,23 +50,23 @@ console.log(`Created file: ${README_MD_PATH}`);
 // create package.json
 const PACKAGE_JSON_PATH = join(BASE_PATH, "package.json");
 const PACKAGE_JSON_CONTENT = {
-	name: exampleName,
-	version: "1.0.0",
-	description: exampleDescription,
-	type: "module",
-	scripts: {},
-	engines: {
-		node: ">=23",
-	},
-	engineStrict: true,
-	keywords: [],
-	author: "Luciano Mammino and Mario Casciaro",
-	license: "MIT",
-	dependencies: {},
-	devDependencies: {},
+  name: exampleName,
+  version: "1.0.0",
+  description: exampleDescription,
+  type: "module",
+  scripts: {},
+  engines: {
+    node: ">=23",
+  },
+  engineStrict: true,
+  keywords: [],
+  author: "Luciano Mammino and Mario Casciaro",
+  license: "MIT",
+  dependencies: {},
+  devDependencies: {},
 };
 await writeFile(
-	PACKAGE_JSON_PATH,
-	JSON.stringify(PACKAGE_JSON_CONTENT, null, 2),
+  PACKAGE_JSON_PATH,
+  JSON.stringify(PACKAGE_JSON_CONTENT, null, 2),
 );
 console.log(`Created file: ${PACKAGE_JSON_PATH}`);

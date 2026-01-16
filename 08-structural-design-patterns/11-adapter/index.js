@@ -3,7 +3,7 @@ import { Level } from "level";
 import { createFsAdapter } from "./fs-adapter.js";
 
 const db = new Level(join(import.meta.dirname, "db"), {
-	valueEncoding: "binary",
+  valueEncoding: "binary",
 });
 const fs = createFsAdapter(db);
 

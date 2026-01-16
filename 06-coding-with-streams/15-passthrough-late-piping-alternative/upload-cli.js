@@ -8,15 +8,15 @@ const filepath = process.argv[2];
 const filename = basename(filepath);
 
 pipeline(
-	createReadStream(filepath),
-	createBrotliCompress(),
-	createUploadStream(`${filename}.br`),
-	(err) => {
-		if (err) {
-			console.error(err);
-			process.exit(1);
-		}
+  createReadStream(filepath),
+  createBrotliCompress(),
+  createUploadStream(`${filename}.br`),
+  (err) => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
 
-		console.log("File uploaded");
-	},
+    console.log("File uploaded");
+  },
 );

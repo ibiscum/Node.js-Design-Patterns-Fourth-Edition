@@ -7,16 +7,16 @@ export const gifRgx = /\.gif$/;
 export const pngRgx = /\.png$/;
 
 function createImage(name) {
-	if (name.match(jpgRgx)) {
-		return new ImageJpeg(name);
-	}
-	if (name.match(gifRgx)) {
-		return new ImageGif(name);
-	}
-	if (name.match(pngRgx)) {
-		return new ImagePng(name);
-	}
-	throw new Error("Unsupported format");
+  if (name.match(jpgRgx)) {
+    return new ImageJpeg(name);
+  }
+  if (name.match(gifRgx)) {
+    return new ImageGif(name);
+  }
+  if (name.match(pngRgx)) {
+    return new ImagePng(name);
+  }
+  throw new Error("Unsupported format");
 }
 
 const image1 = createImage("photo.jpg");

@@ -7,24 +7,24 @@ const filename = process.argv[2];
 const serverHost = process.argv[3];
 
 const httpRequestOptions = {
-	hostname: serverHost,
-	port: 3000,
-	path: "/",
-	method: "POST",
-	headers: {
-		"content-type": "application/octet-stream",
-		"content-encoding": "gzip",
-		"x-filename": basename(filename),
-	},
+  hostname: serverHost,
+  port: 3000,
+  path: "/",
+  method: "POST",
+  headers: {
+    "content-type": "application/octet-stream",
+    "content-encoding": "gzip",
+    "x-filename": basename(filename),
+  },
 };
 
 const req = request(httpRequestOptions, (res) => {
-	console.log(`Server response: ${res.statusCode}`);
+  console.log(`Server response: ${res.statusCode}`);
 });
 
 createReadStream(filename)
-	.pipe(createGzip())
-	.pipe(req)
-	.on("finish", () => {
-		console.log("File successfully sent");
-	});
+  .pipe(createGzip())
+  .pipe(req)
+  .on("finish", () => {
+    console.log("File successfully sent");
+  });

@@ -4,13 +4,13 @@ import { Writable } from "node:stream";
 import { mkdirp } from "mkdirp";
 
 const tfs = new Writable({
-	objectMode: true,
-	write(chunk, _encoding, cb) {
-		mkdirp(dirname(chunk.path))
-			.then(() => fs.writeFile(chunk.path, chunk.content))
-			.then(() => cb())
-			.catch(cb);
-	},
+  objectMode: true,
+  write(chunk, _encoding, cb) {
+    mkdirp(dirname(chunk.path))
+      .then(() => fs.writeFile(chunk.path, chunk.content))
+      .then(() => cb())
+      .catch(cb);
+  },
 });
 
 const outDir = join(import.meta.dirname, "files");

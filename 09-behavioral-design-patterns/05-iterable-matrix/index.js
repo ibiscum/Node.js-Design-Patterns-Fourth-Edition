@@ -1,20 +1,20 @@
 import { Matrix } from "./matrix.js";
 
 const matrix2x2 = new Matrix([
-	["11", "12"],
-	["21", "22"],
+  ["11", "12"],
+  ["21", "22"],
 ]);
 
 const iterator = matrix2x2[Symbol.iterator]();
 let iterationResult = iterator.next();
 while (!iterationResult.done) {
-	console.log(iterationResult.value);
-	iterationResult = iterator.next();
+  console.log(iterationResult.value);
+  iterationResult = iterator.next();
 }
 
 console.log("for...of:");
 for (const element of matrix2x2) {
-	console.log(element);
+  console.log(element);
 }
 
 console.log("spread operator:");

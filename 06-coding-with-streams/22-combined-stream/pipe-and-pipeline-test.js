@@ -4,15 +4,15 @@ import { pipeline, Transform } from "node:stream";
 
 const streamA = createReadStream("package.json");
 const streamB = new Transform({
-	transform(chunk, _enc, done) {
-		this.push(chunk.toString().toUpperCase());
-		done();
-	},
+  transform(chunk, _enc, done) {
+    this.push(chunk.toString().toUpperCase());
+    done();
+  },
 });
 const streamC = createWriteStream("package-uppercase.json");
 
 const pipelineReturn = pipeline(streamA, streamB, streamC, () => {
-	// handle errors here
+  // handle errors here
 });
 assert.equal(streamC, pipelineReturn); // valid
 

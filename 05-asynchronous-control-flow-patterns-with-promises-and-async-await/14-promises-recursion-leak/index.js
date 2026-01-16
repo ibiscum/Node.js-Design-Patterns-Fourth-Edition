@@ -1,59 +1,59 @@
 function delay(milliseconds) {
-	return new Promise((resolve, _reject) => {
-		setTimeout(() => {
-			resolve(new Date());
-		}, milliseconds);
-	});
+  return new Promise((resolve, _reject) => {
+    setTimeout(() => {
+      resolve(new Date());
+    }, milliseconds);
+  });
 }
 
 function leakingLoop() {
-	return delay(1).then(() => {
-		console.log(`Tick ${Date.now()}`);
-		return leakingLoop();
-	});
+  return delay(1).then(() => {
+    console.log(`Tick ${Date.now()}`);
+    return leakingLoop();
+  });
 }
 
 // biome-ignore lint/correctness/noUnusedVariables: false positive
 function nonLeakingLoop() {
-	delay(1).then(() => {
-		console.log(`Tick ${Date.now()}`);
-		nonLeakingLoop();
-	});
+  delay(1).then(() => {
+    console.log(`Tick ${Date.now()}`);
+    nonLeakingLoop();
+  });
 }
 
 // biome-ignore lint/correctness/noUnusedVariables: false positive
 function nonLeakingLoopWithErrors() {
-	return new Promise((_resolve, reject) => {
-		(function internalLoop() {
-			delay(1)
-				.then(() => {
-					console.log(`Tick ${Date.now()}`);
-					internalLoop();
-				})
-				.catch((err) => {
-					reject(err);
-				});
-		})();
-	});
+  return new Promise((_resolve, reject) => {
+    (function internalLoop() {
+      delay(1)
+        .then(() => {
+          console.log(`Tick ${Date.now()}`);
+          internalLoop();
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    })();
+  });
 }
 
 async function _nonLeakingLoopAsync() {
-	while (true) {
-		await delay(1);
-		console.log(`Tick ${Date.now()}`);
-	}
+  while (true) {
+    await delay(1);
+    console.log(`Tick ${Date.now()}`);
+  }
 }
 
 async function _leakingLoopAsync() {
-	await delay(1);
-	console.log(`Tick ${Date.now()}`);
-	return _leakingLoopAsync();
+  await delay(1);
+  console.log(`Tick ${Date.now()}`);
+  return _leakingLoopAsync();
 }
 
 for (let i = 0; i < 1e6; i++) {
-	leakingLoop();
-	// nonLeakingLoop()
-	// nonLeakingLoopWithErrors()
-	// nonLeakingLoopAsync()
-	// leakingLoopAsync()
+  leakingLoop();
+  // nonLeakingLoop()
+  // nonLeakingLoopWithErrors()
+  // nonLeakingLoopAsync()
+  // leakingLoopAsync()
 }

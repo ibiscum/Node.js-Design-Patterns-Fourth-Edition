@@ -2,7 +2,7 @@ import { Image } from "./image.js";
 
 // Factory function
 function createImage(name) {
-	return new Image(name);
+  return new Image(name);
 }
 
 // Factory invocation

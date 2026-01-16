@@ -9,12 +9,12 @@ const filename = basename(filepath);
 const contentStream = new PassThrough();
 
 upload(`${filename}.br`, contentStream)
-	.then((response) => {
-		console.log(`Server response: ${response.data}`);
-	})
-	.catch((err) => {
-		console.error(err);
-		process.exit(1);
-	});
+  .then((response) => {
+    console.log(`Server response: ${response.data}`);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 
 createReadStream(filepath).pipe(createBrotliCompress()).pipe(contentStream);

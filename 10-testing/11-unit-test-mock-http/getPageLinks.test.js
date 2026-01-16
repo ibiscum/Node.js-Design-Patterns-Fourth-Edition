@@ -4,21 +4,21 @@ import { getGlobalDispatcher, MockAgent, setGlobalDispatcher } from "undici"; //
 import { getInternalLinks } from "./getPageLinks.js";
 
 suite("getPageLinks", { concurrency: true, timeout: 500 }, () => {
-	// naive implementation (real HTTP request)
-	// test('It fetches all the internal links from a page', async () => {
-	//   const links = await getInternalLinks('https://loige.co')
-	//   assert.deepEqual(
-	//     links,
-	//     new Set([
-	//       'https://loige.co/blog',
-	//       'https://loige.co/speaking',
-	//       'https://loige.co/about',
-	//     ])
-	//   )
-	// })
+  // naive implementation (real HTTP request)
+  // test('It fetches all the internal links from a page', async () => {
+  //   const links = await getInternalLinks('https://loige.co')
+  //   assert.deepEqual(
+  //     links,
+  //     new Set([
+  //       'https://loige.co/blog',
+  //       'https://loige.co/speaking',
+  //       'https://loige.co/about',
+  //     ])
+  //   )
+  // })
 
-	test("It fetches all the internal links from a page", async (t) => {
-		const mockHtml = `
+  test("It fetches all the internal links from a page", async (t) => {
+    const mockHtml = `
     <html>
       <body>
         <a href="https://loige.co/blog">Blog</a>
@@ -30,34 +30,34 @@ suite("getPageLinks", { concurrency: true, timeout: 500 }, () => {
     </html>
   `;
 
-		t.mock.method(global, "fetch", async (_url) => ({
-			ok: true,
-			status: 200,
-			headers: {
-				get: (key) =>
-					key === "content-type" ? "text/html; charset=utf-8" : null,
-			},
-			text: async () => mockHtml,
-		}));
+    t.mock.method(global, "fetch", async (_url) => ({
+      ok: true,
+      status: 200,
+      headers: {
+        get: (key) =>
+          key === "content-type" ? "text/html; charset=utf-8" : null,
+      },
+      text: async () => mockHtml,
+    }));
 
-		const links = await getInternalLinks("https://loige.co");
+    const links = await getInternalLinks("https://loige.co");
 
-		assert.deepEqual(
-			links,
-			new Set([
-				"https://loige.co/blog",
-				"https://loige.co/speaking",
-				"https://loige.co/about",
-			]),
-		);
-	});
+    assert.deepEqual(
+      links,
+      new Set([
+        "https://loige.co/blog",
+        "https://loige.co/speaking",
+        "https://loige.co/about",
+      ]),
+    );
+  });
 
-	test("It fetches all the internal links from a page (with undici)", async (_t) => {
-		const agent = new MockAgent();
-		agent.disableNetConnect();
-		setGlobalDispatcher(agent);
+  test("It fetches all the internal links from a page (with undici)", async (_t) => {
+    const agent = new MockAgent();
+    agent.disableNetConnect();
+    setGlobalDispatcher(agent);
 
-		const mockHtml = `
+    const mockHtml = `
     <html>
       <body>
         <a href="https://loige.co/blog">Blog</a>
@@ -69,49 +69,49 @@ suite("getPageLinks", { concurrency: true, timeout: 500 }, () => {
     </html>
   `;
 
-		agent
-			.get("https://loige.co")
-			.intercept({
-				path: "/",
-				method: "GET",
-			})
-			.reply(200, mockHtml, {
-				headers: {
-					"content-type": "text/html; charset=utf-8",
-				},
-			});
+    agent
+      .get("https://loige.co")
+      .intercept({
+        path: "/",
+        method: "GET",
+      })
+      .reply(200, mockHtml, {
+        headers: {
+          "content-type": "text/html; charset=utf-8",
+        },
+      });
 
-		const links = await getInternalLinks("https://loige.co");
+    const links = await getInternalLinks("https://loige.co");
 
-		assert.deepEqual(
-			links,
-			new Set([
-				"https://loige.co/blog",
-				"https://loige.co/speaking",
-				"https://loige.co/about",
-			]),
-		);
-	});
+    assert.deepEqual(
+      links,
+      new Set([
+        "https://loige.co/blog",
+        "https://loige.co/speaking",
+        "https://loige.co/about",
+      ]),
+    );
+  });
 });
 
 suite("example with undici and beforeEach + afterEach", () => {
-	let agent;
-	const originalGlobalDispatcher = getGlobalDispatcher();
+  let agent;
+  const originalGlobalDispatcher = getGlobalDispatcher();
 
-	beforeEach(() => {
-		agent = new MockAgent();
-		agent.disableNetConnect();
-		setGlobalDispatcher(agent);
-	});
+  beforeEach(() => {
+    agent = new MockAgent();
+    agent.disableNetConnect();
+    setGlobalDispatcher(agent);
+  });
 
-	afterEach(() => {
-		setGlobalDispatcher(originalGlobalDispatcher);
-	});
+  afterEach(() => {
+    setGlobalDispatcher(originalGlobalDispatcher);
+  });
 
-	test("a test...", () => {
-		/* ... */
-	});
-	test("another test...", () => {
-		/* ... */
-	});
+  test("a test...", () => {
+    /* ... */
+  });
+  test("another test...", () => {
+    /* ... */
+  });
 });

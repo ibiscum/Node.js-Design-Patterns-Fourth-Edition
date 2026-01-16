@@ -7,19 +7,19 @@ const destStream = createWriteStream(dest);
 
 let endCount = 0;
 for (const source of sources) {
-	const sourceStream = createReadStream(source, { highWaterMark: 16 });
-	const linesStream = Readable.from(createInterface({ input: sourceStream }));
-	const addLineEnd = new Transform({
-		transform(chunk, _encoding, cb) {
-			cb(null, `${chunk}\n`);
-		},
-	});
+  const sourceStream = createReadStream(source, { highWaterMark: 16 });
+  const linesStream = Readable.from(createInterface({ input: sourceStream }));
+  const addLineEnd = new Transform({
+    transform(chunk, _encoding, cb) {
+      cb(null, `${chunk}\n`);
+    },
+  });
 
-	sourceStream.on("end", () => {
-		if (++endCount === sources.length) {
-			destStream.end();
-			console.log(`${dest} created`);
-		}
-	});
-	linesStream.pipe(addLineEnd).pipe(destStream, { end: false });
+  sourceStream.on("end", () => {
+    if (++endCount === sources.length) {
+      destStream.end();
+      console.log(`${dest} created`);
+    }
+  });
+  linesStream.pipe(addLineEnd).pipe(destStream, { end: false });
 }

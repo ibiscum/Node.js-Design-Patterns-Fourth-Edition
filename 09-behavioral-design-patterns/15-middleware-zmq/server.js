@@ -10,13 +10,13 @@ const zmqm = new ZmqMiddlewareManager(socket);
 zmqm.use(zlibMiddleware());
 zmqm.use(jsonMiddleware());
 zmqm.use({
-	async inbound(message) {
-		console.log("Received", message);
-		if (message.action === "ping") {
-			await this.send({ action: "pong", echo: message.echo });
-		}
-		return message;
-	},
+  async inbound(message) {
+    console.log("Received", message);
+    if (message.action === "ping") {
+      await this.send({ action: "pong", echo: message.echo });
+    }
+    return message;
+  },
 });
 
 console.log("Server started");

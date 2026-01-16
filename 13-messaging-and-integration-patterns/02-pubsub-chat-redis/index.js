@@ -8,28 +8,28 @@ const redisSub = new Redis();
 
 // serve static files
 const server = createServer((req, res) => {
-	return staticHandler(req, res, { public: "web" });
+  return staticHandler(req, res, { public: "web" });
 });
 
 const wss = new WebSocketServer({ server });
 wss.on("connection", (client) => {
-	console.log("Client connected");
-	client.on("message", (msg) => {
-		console.log(`Sending message to Redis: ${msg}`);
-		redisPub.publish("chat_messages", msg);
-	});
+  console.log("Client connected");
+  client.on("message", (msg) => {
+    console.log(`Sending message to Redis: ${msg}`);
+    redisPub.publish("chat_messages", msg);
+  });
 });
 
 redisSub.subscribe("chat_messages");
 redisSub.on("message", (channel, msg) => {
-	if (channel === "chat_messages") {
-		console.log(`Received message from Redis: ${msg}`);
-		for (const client of wss.clients) {
-			if (client.readyState === WebSocket.OPEN) {
-				client.send(Buffer.from(msg));
-			}
-		}
-	}
+  if (channel === "chat_messages") {
+    console.log(`Received message from Redis: ${msg}`);
+    for (const client of wss.clients) {
+      if (client.readyState === WebSocket.OPEN) {
+        client.send(Buffer.from(msg));
+      }
+    }
+  }
 });
 
 server.listen(process.argv[2] || 8080);

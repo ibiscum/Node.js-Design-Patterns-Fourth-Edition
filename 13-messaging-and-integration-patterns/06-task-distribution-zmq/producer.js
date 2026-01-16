@@ -11,5 +11,5 @@ await ventilator.bind("tcp://*:5016");
 
 const generatorObj = generateTasks(searchHash, ALPHABET, maxLength, BATCH_SIZE);
 for (const task of generatorObj) {
-	await ventilator.send(task);
+  await ventilator.send(task);
 }

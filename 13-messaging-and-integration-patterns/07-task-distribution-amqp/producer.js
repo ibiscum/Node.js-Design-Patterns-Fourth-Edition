@@ -12,8 +12,8 @@ await channel.assertQueue("tasks_queue");
 
 const generatorObj = generateTasks(searchHash, ALPHABET, maxLength, BATCH_SIZE);
 for (const task of generatorObj) {
-	console.log(`Sending task: ${task}`);
-	await channel.sendToQueue("tasks_queue", Buffer.from(task));
+  console.log(`Sending task: ${task}`);
+  await channel.sendToQueue("tasks_queue", Buffer.from(task));
 }
 
 await channel.waitForConfirms();

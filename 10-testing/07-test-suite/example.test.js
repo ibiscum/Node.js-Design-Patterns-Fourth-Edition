@@ -1,8 +1,8 @@
 import { suite, test } from "node:test";
 
 suite("Top level suite", { concurrency: true }, () => {
-	test("Test 1", () => {});
-	test("Test 2", () => {});
+  test("Test 1", () => {});
+  test("Test 2", () => {});
 });
 
 // Equivalent to:

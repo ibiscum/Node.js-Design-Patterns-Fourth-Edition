@@ -5,19 +5,19 @@ import { ConcurrentStream } from "./concurrent-stream.js";
 
 const inputFile = createReadStream(process.argv[2]);
 const fileLines = createInterface({
-	input: inputFile,
+  input: inputFile,
 });
 const checkUrls = new ConcurrentStream(async (url, _enc, push, done) => {
-	if (!url) {
-		return done();
-	}
-	try {
-		await fetch(url, { method: "HEAD", timeout: 5 * 1000 });
-		push(`${url} is up\n`);
-	} catch (err) {
-		push(`${url} is down: ${err}\n`);
-	}
-	done();
+  if (!url) {
+    return done();
+  }
+  try {
+    await fetch(url, { method: "HEAD", timeout: 5 * 1000 });
+    push(`${url} is up\n`);
+  } catch (err) {
+    push(`${url} is down: ${err}\n`);
+  }
+  done();
 });
 const outputFile = createWriteStream("results.txt");
 

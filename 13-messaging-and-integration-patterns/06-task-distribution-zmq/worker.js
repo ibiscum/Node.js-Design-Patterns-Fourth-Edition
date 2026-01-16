@@ -8,10 +8,10 @@ fromVentilator.connect("tcp://localhost:5016");
 toSink.connect("tcp://localhost:5017");
 
 for await (const rawMessage of fromVentilator) {
-	const found = processTask(JSON.parse(rawMessage.toString()));
-	if (found) {
-		console.log(`Found! => ${found}`);
-		await toSink.send(`Found: ${found}`);
-		break;
-	}
+  const found = processTask(JSON.parse(rawMessage.toString()));
+  if (found) {
+    console.log(`Found! => ${found}`);
+    await toSink.send(`Found: ${found}`);
+    break;
+  }
 }

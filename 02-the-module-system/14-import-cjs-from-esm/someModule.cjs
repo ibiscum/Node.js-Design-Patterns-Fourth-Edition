@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = {
-	someFeature: "someFeature",
+  someFeature: "someFeature",
 };
 
 // comment the following line and run main2.mjs to see the error

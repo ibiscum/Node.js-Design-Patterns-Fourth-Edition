@@ -1,10 +1,10 @@
 function* twoWayGenerator() {
-	try {
-		const who = yield null;
-		yield `Hello ${who}`;
-	} catch (err) {
-		yield `Hello error: ${err.message}`;
-	}
+  try {
+    const who = yield null;
+    yield `Hello ${who}`;
+  } catch (err) {
+    yield `Hello error: ${err.message}`;
+  }
 }
 
 console.log("Passing a value back to the generator:");

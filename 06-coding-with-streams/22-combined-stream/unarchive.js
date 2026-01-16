@@ -9,14 +9,14 @@ const [, , password, ivHex, source, destination] = process.argv;
 const iv = Buffer.from(ivHex, "hex");
 
 pipeline(
-	createReadStream(source),
-	createDecryptAndDecompress(password, iv),
-	createWriteStream(destination),
-	(err) => {
-		if (err) {
-			console.error(err);
-			process.exit(1);
-		}
-		console.log(`${destination} created`);
-	},
+  createReadStream(source),
+  createDecryptAndDecompress(password, iv),
+  createWriteStream(destination),
+  (err) => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+    console.log(`${destination} created`);
+  },
 );
