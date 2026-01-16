@@ -12,6 +12,6 @@
 	"author": "Luciano Mammino and Mario Casciaro",
 	"license": "MIT",
 	"dependencies": {
-		"fastify": "^5.6.2"
+		"fastify": "^5.7.0"
 	}
 }
