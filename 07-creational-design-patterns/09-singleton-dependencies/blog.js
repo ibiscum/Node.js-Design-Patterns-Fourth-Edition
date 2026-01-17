@@ -4,16 +4,16 @@ export class Blog {
   initialize() {
     const initQuery = `CREATE TABLE IF NOT EXISTS posts (
       id TEXT PRIMARY KEY,
-      title TEXT NOT NULL,
+      title TEXT,
       content TEXT,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );`;
 
-    return db.run(initQuery);
+    return db.exec(initQuery);
   }
 
   createPost(id, title, content, createdAt) {
-    return db.run(
+    return db.exec(
       "INSERT INTO posts VALUES (?, ?, ?, ?)",
       id,
       title,
@@ -23,6 +23,6 @@ export class Blog {
   }
 
   getAllPosts() {
-    return db.all("SELECT * FROM posts ORDER BY created_at DESC");
+    return db.exec("SELECT * FROM posts ORDER BY created_at DESC");
   }
 }

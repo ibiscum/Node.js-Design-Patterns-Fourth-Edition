@@ -24,7 +24,7 @@ const posts = [
 ];
 
 const blog = new Blog();
-await blog.initialize();
+blog.initialize();
 
 await Promise.all(
   posts.map((post) =>

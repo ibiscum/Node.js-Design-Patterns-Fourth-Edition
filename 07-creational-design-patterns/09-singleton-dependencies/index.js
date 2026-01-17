@@ -1,9 +1,9 @@
 import { Blog } from "./blog.js";
 
 const blog = new Blog();
-await blog.initialize();
-const posts = await blog.getAllPosts();
-if (posts.length === 0) {
+blog.initialize();
+const posts = blog.getAllPosts();
+if (posts.length === 0 || !posts) {
   console.log(
     "No post available. Run `node import-posts.js`" +
       " to load some sample posts",
