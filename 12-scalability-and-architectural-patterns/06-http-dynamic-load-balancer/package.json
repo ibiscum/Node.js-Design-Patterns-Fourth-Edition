@@ -16,6 +16,6 @@
   },
   "dependencies": {
     "httpxy": "^0.1.7",
-    "portfinder": "^1.0.37"
+    "portfinder": "^1.0.38"
   }
 }
