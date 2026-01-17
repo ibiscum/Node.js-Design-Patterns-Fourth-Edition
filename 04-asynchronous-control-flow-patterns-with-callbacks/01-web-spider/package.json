@@ -12,7 +12,7 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
-    "lint-staged": "^16.2.4",
+    "lint-staged": "^16.2.7",
     "mkdirp": "^3.0.1",
     "slug": "^11.0.1"
   }
