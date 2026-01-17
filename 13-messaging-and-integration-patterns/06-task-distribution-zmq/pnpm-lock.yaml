@@ -12,36 +12,36 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       zeromq:
-        specifier: ^6.3.0
-        version: 6.4.2
+        specifier: ^6.5.0
+        version: 6.5.0
 
 packages:
 
-  cmake-ts@0.6.1:
-    resolution: {integrity: sha512-uUn2qGhf20j8W/sQ7+UnvvqO1zNccqgbLgwRJi7S23FsjMWJqxvKK80Vc+tvLNKfpJzwH0rgoQD1l24SMnX0yg==}
+  cmake-ts@1.0.2:
+    resolution: {integrity: sha512-5l++JHE7MxFuyV/OwJf3ek7ZZN1aGPFPM5oUz6AnK5inQAPe4TFXRMz5sA2qg2FRgByPWdqO+gSfIPo8GzoKNQ==}
     hasBin: true
 
   indexed-string-variation@2.1.0:
     resolution: {integrity: sha512-FTqiGtXcxfblaAXJyBe44+db34fX3ls8vCE4qJl2AOOmHOFOnxSq+tCmhGvd0RlY0HcpGBRl/rUCfRqyvMX1yQ==}
     engines: {node: '>=22'}
 
-  node-addon-api@8.4.0:
-    resolution: {integrity: sha512-D9DI/gXHvVmjHS08SVch0Em8G5S1P+QWtU31appcKT/8wFSPRcdHadIFSAntdMMVM5zz+/DL+bL/gz3UDppqtg==}
+  node-addon-api@8.5.0:
+    resolution: {integrity: sha512-/bRZty2mXUIFY/xU5HLvveNHlswNJej+RnxBjOMkidWfwZzgTbPG1E3K5TOxRLOR+5hX7bSofy8yf1hZevMS8A==}
     engines: {node: ^18 || ^20 || >= 21}
 
-  zeromq@6.4.2:
-    resolution: {integrity: sha512-FnQlI4lEAewE4JexJ6kqQuBVzRf0Mg1n/qE3uXilfosf+X5lqJPiaYfdL/w4SzgAEVBTyqbMt9NbjwI5H89Yaw==}
+  zeromq@6.5.0:
+    resolution: {integrity: sha512-vWOrt19lvcXTxu5tiHXfEGQuldSlU+qZn2TT+4EbRQzaciWGwNZ99QQTolQOmcwVgZLodv+1QfC6UZs2PX/6pQ==}
     engines: {node: '>= 12'}
 
 snapshots:
 
-  cmake-ts@0.6.1: {}
+  cmake-ts@1.0.2: {}
 
   indexed-string-variation@2.1.0: {}
 
-  node-addon-api@8.4.0: {}
+  node-addon-api@8.5.0: {}
 
-  zeromq@6.4.2:
+  zeromq@6.5.0:
     dependencies:
-      cmake-ts: 0.6.1
-      node-addon-api: 8.4.0
+      cmake-ts: 1.0.2
+      node-addon-api: 8.5.0

@@ -12,11 +12,11 @@ importers:
         specifier: ^6.1.6
         version: 6.1.6
       ws:
-        specifier: ^8.18.2
-        version: 8.18.2
+        specifier: ^8.19.0
+        version: 8.19.0
       zeromq:
-        specifier: ^6.3.0
-        version: 6.4.2
+        specifier: ^6.5.0
+        version: 6.5.0
 
 packages:
 
@@ -30,8 +30,8 @@ packages:
     resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==}
     engines: {node: '>= 0.8'}
 
-  cmake-ts@0.6.1:
-    resolution: {integrity: sha512-uUn2qGhf20j8W/sQ7+UnvvqO1zNccqgbLgwRJi7S23FsjMWJqxvKK80Vc+tvLNKfpJzwH0rgoQD1l24SMnX0yg==}
+  cmake-ts@1.0.2:
+    resolution: {integrity: sha512-5l++JHE7MxFuyV/OwJf3ek7ZZN1aGPFPM5oUz6AnK5inQAPe4TFXRMz5sA2qg2FRgByPWdqO+gSfIPo8GzoKNQ==}
     hasBin: true
 
   concat-map@0.0.1:
@@ -52,8 +52,8 @@ packages:
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
-  node-addon-api@8.3.1:
-    resolution: {integrity: sha512-lytcDEdxKjGJPTLEfW4mYMigRezMlyJY8W4wxJK8zE533Jlb8L8dRuObJFWg2P+AuOIxoCgKF+2Oq4d4Zd0OUA==}
+  node-addon-api@8.5.0:
+    resolution: {integrity: sha512-/bRZty2mXUIFY/xU5HLvveNHlswNJej+RnxBjOMkidWfwZzgTbPG1E3K5TOxRLOR+5hX7bSofy8yf1hZevMS8A==}
     engines: {node: ^18 || ^20 || >= 21}
 
   path-is-inside@1.0.2:
@@ -69,8 +69,8 @@ packages:
   serve-handler@6.1.6:
     resolution: {integrity: sha512-x5RL9Y2p5+Sh3D38Fh9i/iQ5ZK+e4xuXRd/pGbM4D13tgo/MGwbttUk8emytcr1YYzBYs+apnUngBDFYfpjPuQ==}
 
-  ws@8.18.2:
-    resolution: {integrity: sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ==}
+  ws@8.19.0:
+    resolution: {integrity: sha512-blAT2mjOEIi0ZzruJfIhb3nps74PRWTCz1IjglWEEpQl5XS/UNama6u2/rjFkDDouqr4L67ry+1aGIALViWjDg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -81,8 +81,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  zeromq@6.4.2:
-    resolution: {integrity: sha512-FnQlI4lEAewE4JexJ6kqQuBVzRf0Mg1n/qE3uXilfosf+X5lqJPiaYfdL/w4SzgAEVBTyqbMt9NbjwI5H89Yaw==}
+  zeromq@6.5.0:
+    resolution: {integrity: sha512-vWOrt19lvcXTxu5tiHXfEGQuldSlU+qZn2TT+4EbRQzaciWGwNZ99QQTolQOmcwVgZLodv+1QfC6UZs2PX/6pQ==}
     engines: {node: '>= 12'}
 
 snapshots:
@@ -96,7 +96,7 @@ snapshots:
 
   bytes@3.0.0: {}
 
-  cmake-ts@0.6.1: {}
+  cmake-ts@1.0.2: {}
 
   concat-map@0.0.1: {}
 
@@ -112,7 +112,7 @@ snapshots:
     dependencies:
       brace-expansion: 1.1.12
 
-  node-addon-api@8.3.1: {}
+  node-addon-api@8.5.0: {}
 
   path-is-inside@1.0.2: {}
 
@@ -130,9 +130,9 @@ snapshots:
       path-to-regexp: 3.3.0
       range-parser: 1.2.0
 
-  ws@8.18.2: {}
+  ws@8.19.0: {}
 
-  zeromq@6.4.2:
+  zeromq@6.5.0:
     dependencies:
-      cmake-ts: 0.6.1
-      node-addon-api: 8.3.1
+      cmake-ts: 1.0.2
+      node-addon-api: 8.5.0
