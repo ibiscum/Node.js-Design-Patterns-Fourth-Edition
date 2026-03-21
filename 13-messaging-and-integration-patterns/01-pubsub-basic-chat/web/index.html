@@ -253,7 +253,7 @@
     <script>
       const messagesArea = document.getElementById("messages")
       const messageInput = document.getElementById("msgBox")
-      const sendButton = document.getElementById("sendButton")
+      // const sendButton = document.getElementById("sendButton")
       const form = document.getElementById("msgForm")
 
       // WebSocket connection
@@ -290,7 +290,8 @@
       // Auto-resize textarea
       messageInput.addEventListener("input", function () {
         this.style.height = "auto"
-        this.style.height = Math.min(this.scrollHeight, 120) + "px"
+        // this.style.height = Math.min(this.scrollHeight, 120) + "px"
+        this.style.height = `${Math.min(this.scrollHeight, 120)}px`
       })
 
       // Send message function

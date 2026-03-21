@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "This sample demonstrates the Pub/Sub pattern by implementing a basic chat application using WebSockets.",
   "type": "module",
-  "scripts": {},
+  "private": true,
+  "scripts": {
+    "dev": "node index.js 8080",
+    "test": "node --test",
+    "lint": "biome check --no-errors-on-unmatched",
+    "lint:fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },
