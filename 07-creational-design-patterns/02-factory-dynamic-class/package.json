@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "This sample demonstrates how to create a Factory function that can resolve the class of the object to create at runtime",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "dev": "node index.js",
+    "test": "pnpm run test:lint",
+    "test:lint": "biome check --no-errors-on-unmatched",
+    "test:lint-fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },

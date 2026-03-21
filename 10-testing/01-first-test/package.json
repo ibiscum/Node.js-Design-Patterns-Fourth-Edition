@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "This sample showcases how to write a simple unit test",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "dev": "node test.js",
+    "test": "pnpm run test:lint",
+    "test:lint": "biome check --no-errors-on-unmatched",
+    "test:lint-fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=22"
   },

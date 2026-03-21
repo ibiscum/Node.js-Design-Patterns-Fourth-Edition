@@ -544,10 +544,10 @@ importers:
   10-testing/11-unit-test-mock-http:
     dependencies:
       htmlparser2:
-        specifier: ^10.0.0
+        specifier: ^10.1.0
         version: 10.1.0
       undici:
-        specifier: ^7.24.0
+        specifier: ^7.24.5
         version: 7.24.5
 
   10-testing/12-unit-test-mock-core-modules: {}

@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "This example shows how to implement a factory function that encapsulates private properties or methods and exposes only a set of public properties and methods",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "dev": "node index.js",
+    "test": "pnpm run test:lint",
+    "test:lint": "biome check --no-errors-on-unmatched",
+    "test:lint-fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },

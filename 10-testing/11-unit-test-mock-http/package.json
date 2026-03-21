@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Demonstrates how to mock HTTP requests in unit tests",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "test": "node --test --experimental-test-coverage",
+    "lint": "biome check --no-errors-on-unmatched",
+    "lint:fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },
@@ -12,7 +16,7 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
-    "htmlparser2": "^10.0.0",
-    "undici": "^7.24.0"
+    "htmlparser2": "^10.1.0",
+    "undici": "^7.24.5"
   }
 }

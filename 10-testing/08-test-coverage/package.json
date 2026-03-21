@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "This sample showcases how to collect and visualize test coverage",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "test": "node --test --experimental-test-coverage",
+    "test:lcov": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info",
+    "lint": "biome check --no-errors-on-unmatched",
+    "lint:fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },
