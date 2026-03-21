@@ -12,8 +12,8 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
-    "ioredis": "^5.9.2",
-    "serve-handler": "^6.1.6",
+    "ioredis": "^5.10.1",
+    "serve-handler": "^6.1.7",
     "ws": "^8.19.0"
   }
 }

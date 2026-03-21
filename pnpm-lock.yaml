@@ -46,7 +46,7 @@ importers:
   02-the-module-system/07-esm-module-resolution:
     dependencies:
       fastify:
-        specifier: ^5.8.1
+        specifier: ^5.8.2
         version: 5.8.2
 
   02-the-module-system/08-esm-circular-dependencies: {}
@@ -100,7 +100,7 @@ importers:
   04-asynchronous-control-flow-patterns-with-callbacks/01-web-spider:
     dependencies:
       lint-staged:
-        specifier: ^16.2.7
+        specifier: ^16.4.0
         version: 16.4.0
       mkdirp:
         specifier: ^3.0.1
@@ -331,13 +331,13 @@ importers:
   06-coding-with-streams/15-passthrough-late-piping:
     dependencies:
       axios:
-        specifier: ^1.13.5
+        specifier: ^1.13.6
         version: 1.13.6
 
   06-coding-with-streams/15-passthrough-late-piping-alternative:
     dependencies:
       axios:
-        specifier: ^1.13.5
+        specifier: ^1.13.6
         version: 1.13.6
 
   06-coding-with-streams/16-connecting-streams-using-pipes: {}
@@ -389,7 +389,7 @@ importers:
   07-creational-design-patterns/06b-builder-in-the-wild:
     dependencies:
       commander:
-        specifier: ^14.0.2
+        specifier: ^14.0.3
         version: 14.0.3
       superagent:
         specifier: ^10.3.0
@@ -453,7 +453,7 @@ importers:
         version: 2.8.2
     devDependencies:
       '@types/node':
-        specifier: ^24.10.9
+        specifier: ^24.12.0
         version: 24.12.0
       typescript:
         specifier: ^5.9.3
@@ -507,7 +507,7 @@ importers:
   09-behavioral-design-patterns/17-command-s3-put-object:
     dependencies:
       '@aws-sdk/client-s3':
-        specifier: ^3.970.0
+        specifier: ^3.1013.0
         version: 3.1013.0
 
   10-testing/01-first-test: {}
@@ -574,7 +574,7 @@ importers:
   10-testing/16-integration-test-http:
     dependencies:
       fastify:
-        specifier: ^5.8.1
+        specifier: ^5.8.2
         version: 5.8.2
       sqlite:
         specifier: ^5.1.1
@@ -586,10 +586,10 @@ importers:
   10-testing/17-e2e-test:
     devDependencies:
       '@playwright/test':
-        specifier: ^1.57.0
+        specifier: ^1.58.2
         version: 1.58.2
       '@types/node':
-        specifier: ^22.19.7
+        specifier: ^22.19.15
         version: 22.19.15
       testcontainers:
         specifier: ^10.28.0
@@ -610,7 +610,7 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0
       nanoid:
-        specifier: ^5.1.6
+        specifier: ^5.1.7
         version: 5.1.7
     devDependencies:
       autocannon:
@@ -685,7 +685,7 @@ importers:
   13-messaging-and-integration-patterns/01-pubsub-basic-chat:
     dependencies:
       serve-handler:
-        specifier: ^6.1.6
+        specifier: ^6.1.7
         version: 6.1.7
       ws:
         specifier: ^8.19.0
@@ -694,10 +694,10 @@ importers:
   13-messaging-and-integration-patterns/02-pubsub-chat-redis:
     dependencies:
       ioredis:
-        specifier: ^5.9.2
+        specifier: ^5.10.1
         version: 5.10.1
       serve-handler:
-        specifier: ^6.1.6
+        specifier: ^6.1.7
         version: 6.1.7
       ws:
         specifier: ^8.19.0
@@ -706,7 +706,7 @@ importers:
   13-messaging-and-integration-patterns/03-pubsub-chat-zmq:
     dependencies:
       serve-handler:
-        specifier: ^6.1.6
+        specifier: ^6.1.7
         version: 6.1.7
       ws:
         specifier: ^8.19.0
@@ -724,7 +724,7 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0
       serve-handler:
-        specifier: ^6.1.6
+        specifier: ^6.1.7
         version: 6.1.7
       ulid:
         specifier: ^3.0.2
@@ -736,10 +736,10 @@ importers:
   13-messaging-and-integration-patterns/05-pubsub-redis-streams:
     dependencies:
       ioredis:
-        specifier: ^5.9.2
+        specifier: ^5.10.1
         version: 5.10.1
       serve-handler:
-        specifier: ^6.1.6
+        specifier: ^6.1.7
         version: 6.1.7
       ws:
         specifier: ^8.19.0
@@ -769,13 +769,13 @@ importers:
         specifier: ^2.1.0
         version: 2.1.0
       ioredis:
-        specifier: ^5.9.2
+        specifier: ^5.10.1
         version: 5.10.1
 
   13-messaging-and-integration-patterns/09-correlation-id:
     dependencies:
       nanoid:
-        specifier: ^5.1.6
+        specifier: ^5.1.7
         version: 5.1.7
 
   13-messaging-and-integration-patterns/10-return-address:
@@ -784,7 +784,7 @@ importers:
         specifier: ^0.10.9
         version: 0.10.9
       nanoid:
-        specifier: ^5.1.6
+        specifier: ^5.1.7
         version: 5.1.7
 
 packages:

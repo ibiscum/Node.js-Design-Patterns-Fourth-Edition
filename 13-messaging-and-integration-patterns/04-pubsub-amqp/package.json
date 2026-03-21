@@ -14,7 +14,7 @@
   "dependencies": {
     "amqplib": "^0.10.9",
     "level": "^10.0.0",
-    "serve-handler": "^6.1.6",
+    "serve-handler": "^6.1.7",
     "ulid": "^3.0.2",
     "ws": "^8.19.0"
   }
