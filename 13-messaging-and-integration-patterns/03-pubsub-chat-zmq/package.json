@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "This sample demonstrates how to integrate different server instances of a chat application using ZeroMQ",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "test": "node --test",
+    "lint": "biome check --no-errors-on-unmatched",
+    "lint:fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },

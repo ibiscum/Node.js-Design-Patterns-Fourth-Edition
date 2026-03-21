@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "This sample demonstrates how to integrate different server instances of a chat application using Redis as message broker",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "dev": "node index.js 8080",
+    "test": "node --test",
+    "lint": "biome check --no-errors-on-unmatched",
+    "lint:fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },
