@@ -12,6 +12,6 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
-    "level": "^9.0.0"
+    "level": "^10.0.0"
   }
 }

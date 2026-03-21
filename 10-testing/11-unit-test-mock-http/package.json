@@ -16,7 +16,7 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
-    "htmlparser2": "^10.1.0",
+    "htmlparser2": "^11.0.0",
     "undici": "^7.24.5"
   }
 }
