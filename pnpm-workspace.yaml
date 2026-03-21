@@ -1,0 +1,21 @@
+packages:
+  - '02-the-module-system/**'
+  - '03-callbacks-and-events/**'
+  - '04-asynchronous-control-flow-patterns-with-callbacks/**'
+  - '05-asynchronous-control-flow-patterns-with-promises-and-async-await/**'
+  - '06-coding-with-streams/**'
+  - '07-creational-design-patterns/**'
+  - '08-structural-design-patterns/**'
+  - '09-behavioral-design-patterns/**'
+  - '10-testing/**'
+  - '11-advanced-recipes/**'
+  - '12-scalability-and-architectural-patterns/**'
+  - '13-messaging-and-integration-patterns/**'
+allowBuilds:
+  classic-level: true
+  cpu-features: true
+  esbuild: true
+  protobufjs: true
+  sqlite3: true
+  ssh2: true
+  zeromq: true

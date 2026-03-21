@@ -2,6 +2,7 @@
   "name": "node-js-design-patterns-fourth-edition",
   "version": "1.0.0",
   "type": "module",
+  "private": true,
   "description": "Code samples for the book Node.js Design Patterns, 4th Edition by Mario Casciaro and Luciano Mammino",
   "scripts": {
     "test": "pnpm run test:lint",
@@ -17,7 +18,7 @@
   ],
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.32.1",
   "devDependencies": {
     "@biomejs/biome": "2.4.4",
     "@types/node": "^25.3.3",

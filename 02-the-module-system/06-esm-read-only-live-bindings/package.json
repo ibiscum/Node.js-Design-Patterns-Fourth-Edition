@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This sample demonstrates that imported ESM modules are read-only live bindings",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "dev": "node main.js"
+  },
   "engines": {
     "node": ">=24"
   },
