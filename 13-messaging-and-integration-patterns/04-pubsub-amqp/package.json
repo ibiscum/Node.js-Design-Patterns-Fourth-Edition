@@ -16,7 +16,7 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
-    "amqplib": "^0.10.9",
+    "amqplib": "^1.0.3",
     "level": "^10.0.0",
     "serve-handler": "^6.1.7",
     "ulid": "^3.0.2",
