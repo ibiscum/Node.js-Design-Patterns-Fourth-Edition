@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "This sample demonstrates how to *promisify* a Node.js-style callback-based function",
   "type": "module",
-  "scripts": {},
+  "private": true,
+  "scripts": {
+    "dev": "node index.js",
+    "test": "node --test",
+    "lint": "biome check --no-errors-on-unmatched",
+    "lint:fix": "biome check --fix"
+  },
   "engines": {
     "node": ">=24"
   },

@@ -13,3 +13,7 @@ We are using `pnpm`, so you'll see `pnpm-lock.yaml` files for those examples
 where you are expected to install dependencies. If you prefer to use other
 package manages (such as `npm` or `yarn`), make sure to delete these files and
 then install the dependencies with your package manager of choice.
+
+## Helper
+
+    grep -r --include="package.json" --exclude-dir="node_modules" "handlebars" .
