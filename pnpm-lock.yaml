@@ -123,8 +123,8 @@ importers:
   04-asynchronous-control-flow-patterns-with-callbacks/04-web-spider-v2:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -137,8 +137,8 @@ importers:
   04-asynchronous-control-flow-patterns-with-callbacks/06-web-spider-v3:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -149,8 +149,8 @@ importers:
   04-asynchronous-control-flow-patterns-with-callbacks/07-callback-unlimited-concurrent-execution-pattern:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -161,8 +161,8 @@ importers:
   04-asynchronous-control-flow-patterns-with-callbacks/08-web-spider-v3-no-race:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -179,8 +179,8 @@ importers:
   04-asynchronous-control-flow-patterns-with-callbacks/12-web-spider-v4:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -195,8 +195,8 @@ importers:
   05-asynchronous-control-flow-patterns-with-promises-and-async-await/03-promises-web-spider-v2:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -207,8 +207,8 @@ importers:
   05-asynchronous-control-flow-patterns-with-promises-and-async-await/04-promises-web-spider-v3:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -219,8 +219,8 @@ importers:
   05-asynchronous-control-flow-patterns-with-promises-and-async-await/05-promises-web-spider-v4:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -241,8 +241,8 @@ importers:
   05-asynchronous-control-flow-patterns-with-promises-and-async-await/11-async-await-web-spider-v2:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -253,8 +253,8 @@ importers:
   05-asynchronous-control-flow-patterns-with-promises-and-async-await/12-async-await-web-spider-v3:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -265,8 +265,8 @@ importers:
   05-asynchronous-control-flow-patterns-with-promises-and-async-await/13-async-await-web-spider-v4:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       mkdirp:
         specifier: ^3.0.1
         version: 3.0.1
@@ -550,8 +550,8 @@ importers:
   10-testing/11-unit-test-mock-http:
     dependencies:
       htmlparser2:
-        specifier: ^11.0.0
-        version: 11.0.0
+        specifier: ^12.0.0
+        version: 12.0.0
       undici:
         specifier: ^7.24.5
         version: 7.24.5
@@ -2394,8 +2394,8 @@ packages:
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
 
-  htmlparser2@11.0.0:
-    resolution: {integrity: sha512-dhrUOrq2hZwr75OOIEXskUwOI9+EOkYc7BE+DlPvNuku2nuICjppK4nJc9O5Dv4N1+SEHmrYFCaZ/tAiCWWfFQ==}
+  htmlparser2@12.0.0:
+    resolution: {integrity: sha512-Tz7u1i95/g2x2jz81+x0FBVhBhY5aRTvD3tXXdFaljuNdzDLJ8UGNRrTcj2cgQvAg3iW/h77Fz15nLW0L0CrZw==}
     engines: {node: '>=20.19.0'}
 
   http-cache-semantics@4.2.0:
@@ -3416,10 +3416,12 @@ packages:
 
   uuid@10.0.0:
     resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   v8-to-istanbul@9.3.0:
@@ -5509,7 +5511,7 @@ snapshots:
 
   html-escaper@2.0.2: {}
 
-  htmlparser2@11.0.0:
+  htmlparser2@12.0.0:
     dependencies:
       domelementtype: 3.0.0
       domhandler: 6.0.1
