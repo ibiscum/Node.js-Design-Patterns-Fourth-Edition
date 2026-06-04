@@ -12,6 +12,6 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "devDependencies": {
-    "tsx": "^4.21.0"
+    "tsx": "^4.22.4"
   }
 }
