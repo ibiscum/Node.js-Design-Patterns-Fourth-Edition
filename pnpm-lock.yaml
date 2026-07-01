@@ -610,8 +610,8 @@ importers:
         specifier: ^10.0.0
         version: 10.0.0
       nanoid:
-        specifier: ^5.1.7
-        version: 5.1.7
+        specifier: ^5.1.16
+        version: 5.1.16
     devDependencies:
       autocannon:
         specifier: ^8.0.0
@@ -775,8 +775,8 @@ importers:
   13-messaging-and-integration-patterns/09-correlation-id:
     dependencies:
       nanoid:
-        specifier: ^5.1.7
-        version: 5.1.7
+        specifier: ^5.1.16
+        version: 5.1.16
 
   13-messaging-and-integration-patterns/10-return-address:
     dependencies:
@@ -784,8 +784,8 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3
       nanoid:
-        specifier: ^5.1.7
-        version: 5.1.7
+        specifier: ^5.1.16
+        version: 5.1.16
 
 packages:
 
@@ -2668,8 +2668,8 @@ packages:
   nan@2.26.2:
     resolution: {integrity: sha512-0tTvBTYkt3tdGw22nrAy50x7gpbGCCFH3AFcyS5WiUu7Eu4vWlri1woE6qHBSfy11vksDqkiwjOnlR7WV8G1Hw==}
 
-  nanoid@5.1.7:
-    resolution: {integrity: sha512-ua3NDgISf6jdwezAheMOk4mbE1LXjm1DfMUDMuJf4AqxLFK3ccGpgWizwa5YV7Yz9EpXwEaWoRXSb/BnV0t5dQ==}
+  nanoid@5.1.16:
+    resolution: {integrity: sha512-kVrnsrJqMR8+oLJnGEmSWw9BivK5mt7H3FZatVRjrc5wGqFYuBxX1yG7+A7Gi5AefkX6t/oCkizcQgpu0cY1dQ==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -5676,7 +5676,7 @@ snapshots:
   nan@2.26.2:
     optional: true
 
-  nanoid@5.1.7: {}
+  nanoid@5.1.16: {}
 
   napi-build-utils@2.0.0: {}
 
