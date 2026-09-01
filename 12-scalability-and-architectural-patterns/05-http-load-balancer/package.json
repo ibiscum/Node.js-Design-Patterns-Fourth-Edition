@@ -20,6 +20,6 @@
     "autocannon": "^8.0.0"
   },
   "dependencies": {
-    "pm2": "^7.0.1"
+    "pm2": "^7.0.4"
   }
 }
