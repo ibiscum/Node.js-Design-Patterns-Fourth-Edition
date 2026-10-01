@@ -14,6 +14,6 @@
   "dependencies": {
     "lint-staged": "^17.0.8",
     "mkdirp": "^3.0.1",
-    "slug": "^11.0.1"
+    "slug": "^12.0.1"
   }
 }
