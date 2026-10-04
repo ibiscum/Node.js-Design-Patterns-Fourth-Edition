@@ -14,7 +14,7 @@
   "devDependencies": {
     "@playwright/test": "^1.62.0",
     "@types/node": "^26.4.0",
-    "testcontainers": "^11.13.0",
+    "testcontainers": "^12.2.0",
     "typescript": "^5.9.3"
   }
 }
